@@ -7,7 +7,7 @@ public final class RPGMobs extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-
         getServer().getPluginManager().registerEvents(new SpawnEvent(), this);
+        getServer().getPluginManager().registerEvents(new AttackEvent(), this);
     }
 }
