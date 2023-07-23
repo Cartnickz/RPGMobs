@@ -1,0 +1,4 @@
+name: RPGMobs
+version: '${project.version}'
+main: com.cartnicklabs.rpgmobs.RPGMobs
+api-version: '1.20'

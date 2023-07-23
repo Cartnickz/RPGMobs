@@ -1,0 +1,4 @@
+name: RPGMobs
+version: '1.0-SNAPSHOT'
+main: com.cartnicklabs.rpgmobs.RPGMobs
+api-version: '1.20'
