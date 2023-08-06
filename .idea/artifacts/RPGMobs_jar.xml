@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RPGMobs:jar">
+    <output-path>$PROJECT_DIR$/../../Test_Server/plugins</output-path>
+    <root id="archive" name="RPGMobs.jar">
+      <element id="module-output" name="RPGMobs" />
+    </root>
+  </artifact>
+</component>

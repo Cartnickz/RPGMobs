@@ -1,1 +1,2 @@
-com/cartnicklabs/rpgmobs/AttackEvent.class
+com/cartnicklabs/rpgmobs/PlayerAttackedEvent.class
+com/cartnicklabs/rpgmobs/EntityTakesDamageEvent.class
