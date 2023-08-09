@@ -37,9 +37,20 @@ public class SpawnEvent implements Listener {
             int mob_y = (int) mobLocation.getY();
             int surface_y = entity.getWorld().getHighestBlockYAt(mobLocation);
             int depth = surface_y - mob_y;
+            if (depth < 0 || entity.getWorld().getEnvironment().toString() == "NETHER"){
+                depth = 0;
+            }
 
             // calculate mob level
-            int level = distance / 500 + depth / 15 + 1;
+            int radius;
+            switch(entity.getWorld().getEnvironment().toString()){
+                case "NETHER": radius = 65;
+                    break;
+                default: radius = 500;
+                    break;
+            }
+            int level = distance / radius + depth / 15 + 1;
+
             ((Enemy) entity).setMaxHealth(((Enemy) entity).getMaxHealth() * (1 + 0.10 * (level - 1)));
             ((Enemy) entity).setHealth(((Enemy) entity).getMaxHealth());
 
