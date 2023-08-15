@@ -22,11 +22,12 @@ public class EntityTakesDamageEvent implements Listener {
             }
             int maxMobHealth = (int) enemy.getMaxHealth();
 
-            // update health bar
-            String enemy_tag_start = enemy.getName().substring(0, enemy.getName().indexOf("("));
-            String enemy_tag = enemy_tag_start + "(" + ChatColor.GOLD + mobHealth + ChatColor.RED + "/ " + maxMobHealth + " HP)";
-            enemy.setCustomName(enemy_tag);
+            String mobName = enemy.getMetadata("Mob Type").get(0).asString();
+            String enemy_tag = ChatColor.GOLD + "Lvl. " + enemy.getMetadata("Level").get(0).asInt() + " "
+                    + ChatColor.GOLD + mobName + " " + ChatColor.RED + "(" + ChatColor.GOLD + mobHealth
+                    + ChatColor.RED + "/ " + maxMobHealth + " HP)";
 
+            enemy.setCustomName(enemy_tag);
             enemy.setCustomNameVisible(true);
         }
     }
